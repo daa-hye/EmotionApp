@@ -11,12 +11,34 @@ class ViewController: UIViewController {
 
     @IBOutlet var moodImageSet: [UIImageView]!
     @IBOutlet var moodViewSet: [UIView]!
+    @IBOutlet var happyButton: UIButton!
 
     var clickedCount = [0,0,0,0,0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUIDesign()
+    }
+
+    @IBAction func happyDidTap(_ sender: UITapGestureRecognizer) {
+        clickedCount[0] += 1
+        print(clickedCount[0])
+    }
+    @IBAction func smileDidTap(_ sender: UITapGestureRecognizer) {
+        clickedCount[1] += 1
+        print(clickedCount[1])
+    }
+    @IBAction func sosoDidTap(_ sender: UITapGestureRecognizer) {
+        clickedCount[2] += 1
+        print(clickedCount[2])
+    }
+    @IBAction func upsetDidTap(_ sender: UITapGestureRecognizer) {
+        clickedCount[3] += 1
+        print(clickedCount[3])
+    }
+    @IBAction func sadDidTap(_ sender: UITapGestureRecognizer) {
+        clickedCount[4] += 1
+        print(clickedCount[4])
     }
 
     func setUIDesign() {
@@ -34,7 +56,6 @@ class ViewController: UIViewController {
             item.backgroundColor = colorSet[item.tag]
         }
     }
-
 
 }
 

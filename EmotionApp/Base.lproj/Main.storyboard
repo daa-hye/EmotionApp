@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,13 +29,31 @@
                                                     <constraint firstAttribute="width" secondItem="TvY-Ip-mUs" secondAttribute="height" multiplier="1:1" id="Br4-bH-sbv"/>
                                                 </constraints>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLm-ai-XjH">
+                                                <rect key="frame" x="321" y="16" width="46" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <menu key="menu" id="bbB-NL-Z8X">
+                                                    <children>
+                                                        <command title="Item 1" id="Dyh-Zx-o2K"/>
+                                                        <command title="Item 2" id="AMI-80-Cqi"/>
+                                                    </children>
+                                                </menu>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="happyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RSp-De-Y8V"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="TvY-Ip-mUs" firstAttribute="height" secondItem="Tqw-3s-rIF" secondAttribute="height" multiplier="0.6" id="87T-ZH-Q6i"/>
                                             <constraint firstItem="TvY-Ip-mUs" firstAttribute="centerX" secondItem="Tqw-3s-rIF" secondAttribute="centerX" id="cmJ-ao-fEj"/>
                                             <constraint firstItem="TvY-Ip-mUs" firstAttribute="centerY" secondItem="Tqw-3s-rIF" secondAttribute="centerY" id="oqa-59-xgI"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="3LP-o8-dT7" appends="YES" id="XvH-Sf-XWM"/>
+                                        </connections>
                                     </view>
                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJM-Nr-X8x">
                                         <rect key="frame" x="0.0" y="133.33333333333334" width="393" height="133.00000000000003"/>
@@ -47,11 +66,15 @@
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="pAA-De-vcM" firstAttribute="centerX" secondItem="dJM-Nr-X8x" secondAttribute="centerX" id="8BG-fP-v44"/>
                                             <constraint firstItem="pAA-De-vcM" firstAttribute="height" secondItem="dJM-Nr-X8x" secondAttribute="height" multiplier="0.6" id="kKv-dF-uhl"/>
                                             <constraint firstItem="pAA-De-vcM" firstAttribute="centerY" secondItem="dJM-Nr-X8x" secondAttribute="centerY" id="mM3-ao-vfN"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Rcn-gu-os1" appends="YES" id="U7O-FN-H3o"/>
+                                        </connections>
                                     </view>
                                     <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRg-Tr-MFb">
                                         <rect key="frame" x="0.0" y="266.33333333333331" width="393" height="133.33333333333331"/>
@@ -64,11 +87,15 @@
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="xGN-r5-NB0" firstAttribute="centerX" secondItem="nRg-Tr-MFb" secondAttribute="centerX" id="5Za-ku-Fte"/>
                                             <constraint firstItem="xGN-r5-NB0" firstAttribute="height" secondItem="nRg-Tr-MFb" secondAttribute="height" multiplier="0.6" id="jTN-eQ-v5y"/>
                                             <constraint firstItem="xGN-r5-NB0" firstAttribute="centerY" secondItem="nRg-Tr-MFb" secondAttribute="centerY" id="wLN-A7-r0f"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="dpI-PT-l07" appends="YES" id="a57-wc-6Xn"/>
+                                        </connections>
                                     </view>
                                     <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LfL-Zx-CD3">
                                         <rect key="frame" x="0.0" y="399.66666666666669" width="393" height="133.00000000000006"/>
@@ -81,11 +108,15 @@
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="rCo-Gu-E2U" firstAttribute="centerX" secondItem="LfL-Zx-CD3" secondAttribute="centerX" id="SYt-rx-1b3"/>
                                             <constraint firstItem="rCo-Gu-E2U" firstAttribute="centerY" secondItem="LfL-Zx-CD3" secondAttribute="centerY" id="Uf4-ZC-O9H"/>
                                             <constraint firstItem="rCo-Gu-E2U" firstAttribute="height" secondItem="LfL-Zx-CD3" secondAttribute="height" multiplier="0.6" id="VaE-CW-JMq"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="4A3-dd-BRX" appends="YES" id="ly8-uP-d60"/>
+                                        </connections>
                                     </view>
                                     <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCZ-b6-zAc">
                                         <rect key="frame" x="0.0" y="532.66666666666663" width="393" height="133.33333333333337"/>
@@ -98,11 +129,15 @@
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="ERu-Aq-4Vh" firstAttribute="centerX" secondItem="hCZ-b6-zAc" secondAttribute="centerX" id="5L7-kD-U1b"/>
                                             <constraint firstItem="ERu-Aq-4Vh" firstAttribute="height" secondItem="hCZ-b6-zAc" secondAttribute="height" multiplier="0.6" id="Ooi-NH-cfJ"/>
                                             <constraint firstItem="ERu-Aq-4Vh" firstAttribute="centerY" secondItem="hCZ-b6-zAc" secondAttribute="centerY" id="Q9A-6I-MQC"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="FIk-WO-5s0" appends="YES" id="0cO-VA-A2y"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -118,6 +153,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="OH MY MOOD" id="MO7-q9-ilC"/>
                     <connections>
+                        <outlet property="happyButton" destination="GLm-ai-XjH" id="TVd-5f-r1L"/>
                         <outletCollection property="moodImageSet" destination="TvY-Ip-mUs" collectionClass="NSMutableArray" id="IHd-v9-pqC"/>
                         <outletCollection property="moodImageSet" destination="pAA-De-vcM" collectionClass="NSMutableArray" id="Z86-9Q-AQs"/>
                         <outletCollection property="moodImageSet" destination="xGN-r5-NB0" collectionClass="NSMutableArray" id="P1M-Xz-8Nx"/>
@@ -131,6 +167,31 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3LP-o8-dT7">
+                    <connections>
+                        <action selector="happyDidTap:" destination="BYZ-38-t0r" id="QAZ-NV-vOO"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Rcn-gu-os1">
+                    <connections>
+                        <action selector="smileDidTap:" destination="BYZ-38-t0r" id="lkD-6w-ooe"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="dpI-PT-l07">
+                    <connections>
+                        <action selector="sosoDidTap:" destination="BYZ-38-t0r" id="4vH-Oh-rcR"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="4A3-dd-BRX">
+                    <connections>
+                        <action selector="upsetDidTap:" destination="BYZ-38-t0r" id="sqF-n5-l5I"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="FIk-WO-5s0">
+                    <connections>
+                        <action selector="sadDidTap:" destination="BYZ-38-t0r" id="L62-0X-ilK"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1084.7328244274809" y="64.788732394366207"/>
         </scene>
