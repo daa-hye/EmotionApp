@@ -13,6 +13,8 @@
 		53820EB22A6FED15001B7561 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53820EB02A6FED15001B7561 /* Main.storyboard */; };
 		53820EB42A6FED16001B7561 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53820EB32A6FED16001B7561 /* Assets.xcassets */; };
 		53820EB72A6FED16001B7561 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53820EB52A6FED16001B7561 /* LaunchScreen.storyboard */; };
+		53820EC12A6FF845001B7561 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53820EC02A6FF845001B7561 /* StatisticsViewController.swift */; };
+		53820EC32A6FFBFB001B7561 /* MoodEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53820EC22A6FFBFB001B7561 /* MoodEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		53820EB32A6FED16001B7561 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53820EB62A6FED16001B7561 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53820EB82A6FED16001B7561 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53820EC02A6FF845001B7561 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		53820EC22A6FFBFB001B7561 /* MoodEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +63,9 @@
 				53820EAA2A6FED15001B7561 /* AppDelegate.swift */,
 				53820EAC2A6FED15001B7561 /* SceneDelegate.swift */,
 				53820EAE2A6FED15001B7561 /* ViewController.swift */,
+				53820EC02A6FF845001B7561 /* StatisticsViewController.swift */,
 				53820EB02A6FED15001B7561 /* Main.storyboard */,
+				53820EC22A6FFBFB001B7561 /* MoodEnum.swift */,
 				53820EB32A6FED16001B7561 /* Assets.xcassets */,
 				53820EB52A6FED16001B7561 /* LaunchScreen.storyboard */,
 				53820EB82A6FED16001B7561 /* Info.plist */,
@@ -139,8 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				53820EAF2A6FED15001B7561 /* ViewController.swift in Sources */,
+				53820EC32A6FFBFB001B7561 /* MoodEnum.swift in Sources */,
 				53820EAB2A6FED15001B7561 /* AppDelegate.swift in Sources */,
 				53820EAD2A6FED15001B7561 /* SceneDelegate.swift in Sources */,
+				53820EC12A6FF845001B7561 /* StatisticsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,8 +301,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +310,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dahye.EmotionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,8 +332,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +341,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dahye.EmotionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
