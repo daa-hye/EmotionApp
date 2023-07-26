@@ -33,7 +33,7 @@ class StatisticsViewController: UIViewController {
     }
 
     @IBAction func resetButtonDidTap(_ sender: UIButton) {
-        for i in 0...4 {
+        for i in 0..<MoodSet.allCases.count {
             guard let mood = MoodSet(rawValue: i) else { return }
             UserDefaults.standard.set(0, forKey: mood.moodEng)
         }
