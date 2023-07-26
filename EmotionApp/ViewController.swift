@@ -21,24 +21,24 @@ class ViewController: UIViewController {
     }
 
     @IBAction func happyDidTap(_ sender: UITapGestureRecognizer) {
-        clickedCount[0] += 1
-        print(clickedCount[0])
+        clickedCount[MoodSet.happy.rawValue] += 1
+        print(clickedCount[MoodSet.happy.rawValue])
     }
     @IBAction func smileDidTap(_ sender: UITapGestureRecognizer) {
-        clickedCount[1] += 1
-        print(clickedCount[1])
+        clickedCount[MoodSet.smile.rawValue] += 1
+        print(clickedCount[MoodSet.smile.rawValue])
     }
     @IBAction func sosoDidTap(_ sender: UITapGestureRecognizer) {
-        clickedCount[2] += 1
-        print(clickedCount[2])
+        clickedCount[MoodSet.soso.rawValue] += 1
+        print(clickedCount[MoodSet.soso.rawValue])
     }
     @IBAction func upsetDidTap(_ sender: UITapGestureRecognizer) {
-        clickedCount[3] += 1
-        print(clickedCount[3])
+        clickedCount[MoodSet.upset.rawValue] += 1
+        print(clickedCount[MoodSet.upset.rawValue])
     }
     @IBAction func sadDidTap(_ sender: UITapGestureRecognizer) {
-        clickedCount[4] += 1
-        print(clickedCount[4])
+        clickedCount[MoodSet.sad.rawValue] += 1
+        print(clickedCount[MoodSet.sad.rawValue])
     }
 
     func setUIDesign() {

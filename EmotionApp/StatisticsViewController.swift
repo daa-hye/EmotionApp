@@ -35,6 +35,7 @@ class StatisticsViewController: UIViewController {
 
         for item in backgroundSet {
             item.backgroundColor = colorSet[item.tag]
+            item.layer.cornerRadius = 20
         }
     }
 }
