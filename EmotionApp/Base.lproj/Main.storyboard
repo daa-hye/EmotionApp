@@ -29,8 +29,8 @@
                                                     <constraint firstAttribute="width" secondItem="TvY-Ip-mUs" secondAttribute="height" multiplier="1:1" id="Br4-bH-sbv"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLm-ai-XjH">
-                                                <rect key="frame" x="321" y="16" width="46" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLm-ai-XjH">
+                                                <rect key="frame" x="365" y="8" width="20" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <menu key="menu" id="bbB-NL-Z8X">
                                                     <children>
@@ -38,7 +38,7 @@
                                                         <command title="Item 2" id="AMI-80-Cqi"/>
                                                     </children>
                                                 </menu>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" image="ellipsis.circle" catalog="system"/>
                                                 <connections>
                                                     <action selector="happyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RSp-De-Y8V"/>
                                                 </connections>
@@ -328,6 +328,15 @@
                                     <constraint firstItem="DKc-q3-gQ0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="f1G-E9-sck" secondAttribute="trailing" constant="8" symbolic="YES" id="otv-xU-bav"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bt-wy-35c">
+                                <rect key="frame" x="159" y="663" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="resetButtonDidTap:" destination="QLT-Mx-dqG" eventType="touchUpInside" id="pTC-Gi-Lg3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="X3S-KR-ObM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -383,6 +392,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Is4-hR-jaX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SvI-OS-K0e">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -436,6 +446,7 @@
     </scenes>
     <resources>
         <image name="chart.bar" catalog="system" width="128" height="89"/>
+        <image name="ellipsis.circle" catalog="system" width="128" height="123"/>
         <image name="pencil.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

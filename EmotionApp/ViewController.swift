@@ -14,31 +14,45 @@ class ViewController: UIViewController {
     @IBOutlet var happyButton: UIButton!
 
     var clickedCount = [0,0,0,0,0]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUIDesign()
     }
 
     @IBAction func happyDidTap(_ sender: UITapGestureRecognizer) {
-        clickedCount[MoodSet.happy.rawValue] += 1
-        print(clickedCount[MoodSet.happy.rawValue])
+        moodDidTap(MoodSet.happy.rawValue)
     }
     @IBAction func smileDidTap(_ sender: UITapGestureRecognizer) {
-        clickedCount[MoodSet.smile.rawValue] += 1
-        print(clickedCount[MoodSet.smile.rawValue])
+        moodDidTap(MoodSet.smile.rawValue)
     }
     @IBAction func sosoDidTap(_ sender: UITapGestureRecognizer) {
-        clickedCount[MoodSet.soso.rawValue] += 1
-        print(clickedCount[MoodSet.soso.rawValue])
+        moodDidTap(MoodSet.soso.rawValue)
     }
     @IBAction func upsetDidTap(_ sender: UITapGestureRecognizer) {
-        clickedCount[MoodSet.upset.rawValue] += 1
-        print(clickedCount[MoodSet.upset.rawValue])
+        moodDidTap(MoodSet.upset.rawValue)
     }
     @IBAction func sadDidTap(_ sender: UITapGestureRecognizer) {
-        clickedCount[MoodSet.sad.rawValue] += 1
-        print(clickedCount[MoodSet.sad.rawValue])
+        moodDidTap(MoodSet.sad.rawValue)
+    }
+
+    func moodDidTap(_ index: Int) {
+        let userDefaultsMoodKey: String
+
+        guard let mood = MoodSet(rawValue: index) else { return }
+
+        switch mood {
+        case .happy : userDefaultsMoodKey = "happy"
+        case .smile : userDefaultsMoodKey = "smile"
+        case .soso : userDefaultsMoodKey = "soso"
+        case .upset : userDefaultsMoodKey = "upset"
+        case .sad : userDefaultsMoodKey = "sad"
+        }
+
+        let count = UserDefaults.standard.integer(forKey: userDefaultsMoodKey) + 1
+
+        UserDefaults.standard.set(count,forKey: userDefaultsMoodKey)
+        print("\(userDefaultsMoodKey) : \(count)번")
     }
 
     func setUIDesign() {

@@ -16,7 +16,29 @@ class StatisticsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUIDesign()
+        loadData()
     }
+
+    func loadData() {
+        for i in 0..<moodCountLabelSet.count {
+            let userDefaultsMoodKey: String
+            guard let mood = MoodSet(rawValue: i) else { return }
+
+            switch mood {
+            case .happy : userDefaultsMoodKey = "happy"
+            case .smile : userDefaultsMoodKey = "smile"
+            case .soso : userDefaultsMoodKey = "soso"
+            case .upset : userDefaultsMoodKey = "upset"
+            case .sad : userDefaultsMoodKey = "sad"
+            }
+
+            moodCountLabelSet[i].text = "\(UserDefaults.standard.integer(forKey: userDefaultsMoodKey))번"
+        }
+    }
+
+    @IBAction func resetButtonDidTap(_ sender: UIButton) {
+    }
+    
 
     func setUIDesign() {
         let colorSet: [UIColor] = [
@@ -37,5 +59,7 @@ class StatisticsViewController: UIViewController {
             item.backgroundColor = colorSet[item.tag]
             item.layer.cornerRadius = 20
         }
+
+
     }
 }
