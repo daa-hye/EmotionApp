@@ -37,18 +37,8 @@ class ViewController: UIViewController {
     }
 
     func moodDidTap(_ index: Int) {
-        let userDefaultsMoodKey: String
-
         guard let mood = MoodSet(rawValue: index) else { return }
-
-        switch mood {
-        case .happy : userDefaultsMoodKey = "happy"
-        case .smile : userDefaultsMoodKey = "smile"
-        case .soso : userDefaultsMoodKey = "soso"
-        case .upset : userDefaultsMoodKey = "upset"
-        case .sad : userDefaultsMoodKey = "sad"
-        }
-
+        let userDefaultsMoodKey = mood.moodEng
         let count = UserDefaults.standard.integer(forKey: userDefaultsMoodKey) + 1
 
         UserDefaults.standard.set(count,forKey: userDefaultsMoodKey)
