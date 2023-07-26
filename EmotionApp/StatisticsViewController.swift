@@ -22,7 +22,7 @@ class StatisticsViewController: UIViewController {
         loadData()
     }
 
-    let moodText = ["happy", "smile", "soso", "upset", "sad"]
+    //let moodText = ["happy", "smile", "soso", "upset", "sad"]
 
     func loadData() {
         for i in 0..<moodCountLabelSet.count {
@@ -30,11 +30,11 @@ class StatisticsViewController: UIViewController {
             guard let mood = MoodSet(rawValue: i) else { return }
 
             switch mood {
-            case .happy : userDefaultsMoodKey = moodText[0]
-            case .smile : userDefaultsMoodKey = moodText[1]
-            case .soso : userDefaultsMoodKey = moodText[2]
-            case .upset : userDefaultsMoodKey = moodText[3]
-            case .sad : userDefaultsMoodKey = moodText[4]
+            case .happy : userDefaultsMoodKey = MoodSet.happy.moodEng
+            case .smile : userDefaultsMoodKey = MoodSet.smile.moodEng
+            case .soso : userDefaultsMoodKey = MoodSet.soso.moodEng
+            case .upset : userDefaultsMoodKey = MoodSet.upset.moodEng
+            case .sad : userDefaultsMoodKey = MoodSet.sad.moodEng
             }
 
             moodCountLabelSet[i].text = "\(UserDefaults.standard.integer(forKey: userDefaultsMoodKey))번"
@@ -42,9 +42,11 @@ class StatisticsViewController: UIViewController {
     }
 
     @IBAction func resetButtonDidTap(_ sender: UIButton) {
-        for mood in moodText {
-            UserDefaults.standard.set(0, forKey: mood)
-        }
+        UserDefaults.standard.set(0, forKey: MoodSet.happy.moodEng)
+        UserDefaults.standard.set(0, forKey: MoodSet.smile.moodEng)
+        UserDefaults.standard.set(0, forKey: MoodSet.soso.moodEng)
+        UserDefaults.standard.set(0, forKey: MoodSet.upset.moodEng)
+        UserDefaults.standard.set(0, forKey: MoodSet.happy.moodEng)
         loadData()
     }
 
