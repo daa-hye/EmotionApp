@@ -47,11 +47,11 @@ class ViewController: UIViewController {
 
     func setUIDesign() {
         let colorSet: [UIColor] = [
-            UIColor.red,
-            UIColor.orange,
-            UIColor.yellow,
-            UIColor.green,
-            UIColor.blue
+            UIColor(red: 248/255, green: 106/255, blue: 140/255, alpha: 1),
+            UIColor(red: 248/255, green: 219/255, blue: 136/255, alpha: 1),
+            UIColor(red: 248/255, green: 249/255, blue: 173/255, alpha: 1),
+            UIColor(red: 171/255, green: 240/255, blue: 225/255, alpha: 1),
+            UIColor(red: 47/255, green: 103/255, blue: 154/255, alpha: 1)
         ]
         for item in moodImageSet {
             item.image = UIImage(named: "emoji\(item.tag)")
